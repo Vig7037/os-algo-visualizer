@@ -1,1 +1,1 @@
-# os-algo-visualizer
+# OS Agorithm Visualizer
