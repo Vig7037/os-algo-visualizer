@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation | OS Virtual Lab</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .docs-section {
+      width: 85%;
+      margin: 60px auto;
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .docs-section h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #2f3a8f;
+    }
+
+    .docs-section p,
+    .docs-section li {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .docs-section ul {
+      padding-left: 20px;
+    }
+
+    .btn_1 {
+      display: inline-block;
+      background: #2f3a8f;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 25px;
+      border: none;
+      font-weight: 600;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn_1:hover {
+      background: #ca321e;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+      <a href="index.html">OS VIRTUAL LAB</a>
+      <div class="nav-links" id="navLinks">
+        <i class="fas fa-window-close" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="docs.html">DOCS</a></li>
+          <li><a href="./backend/ganttcharts.html">SIMULATOR</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </div>
+      <i class="fas fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="text-box">
+      <h1>Documentation</h1>
+      <p>Everything you need to understand OS scheduling algorithms</p>
+    </div>
+  </section>
+
+  <section class="docs-section" data-aos="fade-up">
+    <h1>What is CPU Scheduling?</h1>
+    <p>CPU Scheduling is the process of determining which process will own the CPU while another waits. It ensures the CPU is always utilized effectively by managing the execution of processes.</p>
+  </section>
+
+  <section class="docs-section" data-aos="fade-up">
+    <h1>Why CPU Scheduling?</h1>
+    <p>In multiprogramming systems, scheduling allows one process to use the CPU while another is waiting for I/O. It increases efficiency and system responsiveness.</p>
+    <ul>
+      <li>Maximize CPU utilization</li>
+      <li>Fair process allocation</li>
+      <li>Maximize throughput</li>
+      <li>Minimize turnaround and waiting time</li>
+    </ul>
+  </section>
+
+  <section class="docs-section" data-aos="fade-up">
+    <h1>Types of CPU Scheduling</h1>
+    <p>Scheduling can be:</p>
+    <ul>
+      <li><strong>Preemptive:</strong> High-priority tasks interrupt lower ones.</li>
+      <li><strong>Non-preemptive:</strong> Tasks run until completion or voluntary switch.</li>
+    </ul>
+  </section>
+
+  <section class="docs-section" data-aos="fade-up">
+    <h1>Scheduling Algorithms</h1>
+    <ul>
+      <li>First Come First Serve (FCFS)</li>
+      <li>Shortest Job First (SJF)</li>
+      <li>Priority Scheduling</li>
+      <li>Round Robin</li>
+    </ul>
+    <button class="btn_1" onclick="gotoSimulator()">Try Simulator</button>
+  </section>
+
+  <section class="footer">
+    <p>Made With <i class="far fa-heart"></i> by FOUR-TITUDE</p>
+    <p>&copy; 2025 || All rights reserved</p>
+  </section>
+
+  <script>
+    const navLinks = document.getElementById("navLinks");
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+    function hideMenu() {
+      navLinks.style.right = "-200px";
+    }
+    function gotoSimulator() {
+      window.location.href = "./backend/ganttcharts.html";
+    }
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init({ offset: 100, duration: 800 });</script>
+</body>
+
+</html>

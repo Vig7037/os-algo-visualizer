@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>OS Virtual Lab</title>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html">OS VIRTUAL LAB</a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-window-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="docs.html">DOCS</a></li>
+                    <li><a href="./backend/ganttcharts.html">SIMULATOR</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>
+                CPU Scheduling Simulator
+            </h1>
+            <p>
+                Virtual lab for all type of Scheduling algorithm which will help you to understand algorithm better way.
+
+                <br>Start simulation now.
+            </p>
+            <a href="docs.html" class="hero-btn">GET STARTED</a>
+        </div>
+    </section>
+
+    <section class="course" data-aos="fade-up">
+        <h1>Why Scheduling Algorithms Matter</h1>
+        <p>The main objectives of CPU Scheduling Algorithms include:</p>
+    
+        <div class="row" data-aos="zoom-in-up">
+          <div>
+            <h3>CPU Utilization</h3>
+            <p>Efficiently use CPU resources by allowing processes to share CPU time when others are waiting on I/O, maximizing system throughput.</p>
+          </div>
+          <div>
+            <h3>Maximum Performance</h3>
+            <p>Achieve higher CPU utilization — ideally up to 90% in heavy-load conditions — to ensure the processor is rarely idle.</p>
+          </div>
+          <div>
+            <h3>Minimized Time</h3>
+            <p>Reduce waiting, turnaround, and response time through well-optimized scheduling strategies tailored to different process behaviors.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" data-aos="zoom-in-up">
+        <h1>Learn All Algorithm Types<br>Start Here!</h1>
+        <a href="./docs.html" class="hero-btn">Click Here</a>
+      </section>
+
+    <section class="footer">
+       
+        <p>Made With <i class="far fa-heart"></i> by 4 Outliers</p>
+        <p> <i class="fa fa-copyright"></i> copyright 2025 || All rights reserved</p>
+    </section>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+        function gotoDocs(){
+            location.href = ("docs.html");
+        }
+    </script>
+
+    <!-- animation for cards -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 100, // offset (in px) from the original trigger point
+        duration: 800
+      }
+      );
+    </script>
+</body>
+
+</html>
